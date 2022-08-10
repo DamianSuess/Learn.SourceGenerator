@@ -7,20 +7,15 @@ namespace Learn.SourceGenerator
   ///   Ref: https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview
   /// </summary>
   [Generator]
-  internal class HelloGenerator : ISourceGenerator
+  public class HelloGenerator : ISourceGenerator
   {
     public void Execute(GeneratorExecutionContext context)
     {
-      // Find the method
+      // Find the main method
       var mainMethod = context.Compilation.GetEntryPoint(context.CancellationToken);
 
-      if (mainMethod is null)
-        return;
-
-      var typeName = mainMethod.ContainingType.Name;
-
-      // Generate some source code
-      string source = $@"// Auto-generated code
+      // Build up the source code
+      string source = $@" // Auto-generated code
 using System;
 
 namespace {mainMethod.ContainingNamespace.ToDisplayString()}
@@ -32,13 +27,15 @@ namespace {mainMethod.ContainingNamespace.ToDisplayString()}
     }}
 }}
 ";
+      var typeName = mainMethod.ContainingType.Name;
 
+      // Add the source code to the compilation
       context.AddSource($"{typeName}.g.cs", source);
     }
 
     public void Initialize(GeneratorInitializationContext context)
     {
-      // No initialization required
+      // No initialization required for this one
     }
   }
 }
