@@ -1,10 +1,12 @@
-﻿namespace Learn.SourceGenerator
+﻿namespace Sample.ConsoleApp;
+
+// Refactor fron `internal class` to `partial class`
+partial class Program
 {
-  internal class Program
+  static partial void HelloFrom(string name);
+
+  static void Main(string[] args)
   {
-    static void Main(string[] args)
-    {
-      Console.WriteLine("Hello, World!");
-    }
+    HelloFrom("my generated method Code");
   }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 
 namespace Learn.SourceGenerator
 {
@@ -25,7 +20,7 @@ namespace Learn.SourceGenerator
       var typeName = mainMethod.ContainingType.Name;
 
       // Generate some source code
-      string source = $@" // Auto-generated code
+      string source = $@"// Auto-generated code
 using System;
 
 namespace {mainMethod.ContainingNamespace.ToDisplayString()}

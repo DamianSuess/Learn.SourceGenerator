@@ -7,9 +7,46 @@ Ever wanted to type less for the most common things you type over and over? Oh y
 
 ## Geting started
 
-1. Add NuGet packages, `Microsoft.CodeAnalysis.Analyzers` and `Microsoft.CodeAnalysis.CSharp`.
+### Basic Generator
 
-## Sample
+1. Create 2 projects:
+  * Console App: `Sample.ConsoleApp`
+  * Standard Library: `Learn.SourceGenerator`
+2. Add NuGet packages to the Standard Lib project, `Microsoft.CodeAnalysis.Analyzers` and `Microsoft.CodeAnalysis.CSharp`.
+
+### Console App
+
+1. In the console app, change the class type from `internal class` to `partial class`.
+2. Next, add our method we're going to generate
+
+```cs
+namespace Sample.ConsoleApp;
+
+// Refactor fron `internal class` to `partial class`
+partial class Program
+{
+  static partial void HelloFrom(string name);
+
+  static void Main(string[] args)
+  {
+    HelloFrom("my generated method Code");
+  }
+}
+```
+
+3. Reference the source generator library
+4. Modify the Console App's csproj file
+
+```xml
+<!-- Add this as a new ItemGroup, replacing paths and names appropriately -->
+<ItemGroup>
+    <ProjectReference Include="..\PathTo\SourceGenerator.csproj"
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false" />
+</ItemGroup>
+```
+
+### Generator - Standard Library
 
 ```cs
 using Microsoft.CodeAnalysis;
