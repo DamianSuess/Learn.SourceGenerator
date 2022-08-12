@@ -3,7 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IsPackable>false</IsPackable>
+    <!--
+      Set LangVersion to C# 10 for:
+      * 'static anonymous functions' (9.0)
+      * 'recursive patterns' (8.0)
+      * 'nullable reference types' (8.0)
+      * 'extended property patterns' (10.0)
+    -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mvvm\ObservablePropertyGenerator.Partial.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Mvvm\ObservablePropertyGenerator.Partial.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">

@@ -93,5 +93,7 @@ namespace {mainMethod.ContainingNamespace.ToDisplayString()}
 ## References
 
 * [https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview]
+  * [https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md]
+* Community Toolkit
+  * [https://github.com/CommunityToolkit/dotnet/blob/main/CommunityToolkit.Mvvm.SourceGenerators/ComponentModel/ObservablePropertyGenerator.cs]
 * [https://github.com/amis92/csharp-source-generators]
-* [https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md]
