@@ -4,14 +4,13 @@
 
 Ever wanted to type less for the most common things you type over and over? Oh yes, me too. Probably would shave off 6-months lost time over the years.
 
-
 ## Geting started
 
 ### Basic Generator
 
 1. Create 2 projects:
-  * Console App: `Sample.ConsoleApp`
-  * Standard Library: `Learn.SourceGenerator`
+   * Console App: `Sample.ConsoleApp`
+   * Standard Library: `Learn.SourceGenerator`
 2. Add NuGet packages to the Standard Lib project, `Microsoft.CodeAnalysis.Analyzers` and `Microsoft.CodeAnalysis.CSharp`.
 
 ### Console App
@@ -97,5 +96,5 @@ namespace {mainMethod.ContainingNamespace.ToDisplayString()}
 * Community Toolkit
   * [Sample Property Generator](https://github.com/CommunityToolkit/dotnet/blob/main/CommunityToolkit.Mvvm.SourceGenerators/ComponentModel/ObservablePropertyGenerator.cs)
 * [Collection of Source Generators](https://github.com/amis92/csharp-source-generators)
-* [](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/)
+* [Blog - Source Generators](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/)
 * [4 Ways To Generate Code](https://levelup.gitconnected.com/four-ways-to-generate-code-in-c-including-source-generators-in-net-5-9e6817db425)
