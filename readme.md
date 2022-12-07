@@ -92,8 +92,10 @@ namespace {mainMethod.ContainingNamespace.ToDisplayString()}
 
 ## References
 
-* [https://docs.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview]
-  * [https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md]
+* [Source Generator Overview](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview)
+  * [Source Generators Cookbook](https://github.com/dotnet/roslyn/blob/main/docs/features/source-generators.cookbook.md)
 * Community Toolkit
-  * [https://github.com/CommunityToolkit/dotnet/blob/main/CommunityToolkit.Mvvm.SourceGenerators/ComponentModel/ObservablePropertyGenerator.cs]
-* [https://github.com/amis92/csharp-source-generators]
+  * [Sample Property Generator](https://github.com/CommunityToolkit/dotnet/blob/main/CommunityToolkit.Mvvm.SourceGenerators/ComponentModel/ObservablePropertyGenerator.cs)
+* [Collection of Source Generators](https://github.com/amis92/csharp-source-generators)
+* [](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/)
+* [4 Ways To Generate Code](https://levelup.gitconnected.com/four-ways-to-generate-code-in-c-including-source-generators-in-net-5-9e6817db425)
